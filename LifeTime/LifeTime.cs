@@ -7,18 +7,18 @@ namespace LifeTime
         public delegate T FactoryMethod();
         private FactoryMethod _createInstance;
 
-        public delegate void Destiny(T obj);
+        public delegate void Story(T obj);
 
         public LifeTime(FactoryMethod createInstance)
         {
             _createInstance = createInstance;
         }
 
-        public void LiveThrough(Destiny d)
+        public void GoThrough(Story s)
         {
             using(T obj = _createInstance())
             {
-                d(obj);
+                s(obj);
             }
         } 
     }
