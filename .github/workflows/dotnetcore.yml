@@ -13,7 +13,7 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.100
-        source-url: https://nuget.pkg.github.com/lifetime/index.json
+        source-url: https://nuget.pkg.github.com/7k8m/index.json
       env:
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Build with dotnet
