@@ -2,7 +2,7 @@
 
 namespace LifeTime
 {
-    public abstract class LifeTime<T> where T:IDisposable
+    public class LifeTime<T> where T:IDisposable
     {
         public delegate T FactoryMethod();
         private FactoryMethod _createInstance;

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeTime", "LifeTime\LifeTime.csproj", "{39BC1247-BA4A-46DB-8927-4C38E5563830}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LifeTime", "LifeTime\LifeTime.csproj", "{39BC1247-BA4A-46DB-8927-4C38E5563830}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLifeTime", "TestLifeTime\TestLifeTime.csproj", "{67289B75-E4E1-4C17-8388-569D9B958DE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{39BC1247-BA4A-46DB-8927-4C38E5563830}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39BC1247-BA4A-46DB-8927-4C38E5563830}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39BC1247-BA4A-46DB-8927-4C38E5563830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67289B75-E4E1-4C17-8388-569D9B958DE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67289B75-E4E1-4C17-8388-569D9B958DE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67289B75-E4E1-4C17-8388-569D9B958DE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67289B75-E4E1-4C17-8388-569D9B958DE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
