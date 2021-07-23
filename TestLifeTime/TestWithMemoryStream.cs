@@ -11,7 +11,7 @@ namespace TestLifeTime
         {
             var lifeTime = 
                 new LifeTime<MemoryStream>(() => new MemoryStream());
-            lifeTime.GoThrough((ms) => {
+            lifeTime.Complete((ms) => {
                 Assert.IsInstanceOf(typeof(MemoryStream), ms);
             });
         }

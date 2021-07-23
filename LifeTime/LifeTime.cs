@@ -14,7 +14,7 @@ namespace LifeTime
             _createInstance = createInstance;
         }
 
-        public void GoThrough(Story s)
+        public void Complete(Story s)
         {
             using(T obj = _createInstance())
             {
