@@ -22,4 +22,4 @@ jobs:
       run: dotnet test --configuration Release
     - name: Push to GitHub Package
       if: github.ref == 'refs/heads/main'
-      run: dotnet nuget push "LifeTime/bin/Release/net5.0/LifeTime.*.nupkg" --skip-duplicate
+      run: dotnet nuget push "LifeTime/bin/Release/LifeTime.*.nupkg" --skip-duplicate
