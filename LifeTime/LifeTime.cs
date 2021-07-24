@@ -13,6 +13,10 @@ namespace LifeTime
         /// </summary>
         /// <returns>An instance of T </returns>
         public delegate T FactoryMethod();
+
+        /// <summary>
+        /// The factory method for T of this LifeTime object
+        /// </summary>
         private FactoryMethod _createInstance;
 
         /// <summary>
