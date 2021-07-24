@@ -8,6 +8,7 @@ namespace LifeTime
         private FactoryMethod _createInstance;
 
         public delegate void Story(T obj);
+        public delegate R Story<R>(T obj);
 
         public LifeTime(FactoryMethod createInstance)
         {
@@ -21,5 +22,12 @@ namespace LifeTime
                 s(obj);
             }
         } 
+
+        public R Complete<R>(Story<R> s){
+            using(T obj = _createInstance())
+            {
+                return s(obj);
+            }
+        }
     }
 }
