@@ -13,7 +13,7 @@ namespace LifeTime
         /// Delegate of factory method for task to instantiate type T objecct
         /// </summary>
         /// <returns>An instance of T </returns>
-        public delegate Task<T> FactoryMethod();
+        public delegate ValueTask<T> FactoryMethod();
 
         /// <summary>
         /// The factory method for task to instantiate T of this LifeTime object
@@ -24,7 +24,7 @@ namespace LifeTime
         /// Delegate of method to create a task through over life time of type T object
         /// </summary>
         /// <param name="obj">Object of T</param>
-        public delegate Task Story(T obj);
+        public delegate ValueTask Story(T obj);
 
         /// <summary>
         /// Delegate of method to create a task through over life time of type T object with result
@@ -32,7 +32,7 @@ namespace LifeTime
         /// <typeparam name="R">Type of result</typeparam>
         /// <param name="obj">Object of T</param>
         /// <returns>result value</returns>
-        public delegate Task<R> Story<R>(T obj);
+        public delegate ValueTask<R> Story<R>(T obj);
 
         /// <summary>
         /// Constructor of LifeTime
@@ -47,7 +47,7 @@ namespace LifeTime
         /// Execute whole story of type T object and dispose it.
         /// </summary>
         /// <param name="s">Delegate of story</param>
-        public async Task Complete(Story s)
+        public async ValueTask Complete(Story s)
         {
             using (T obj = await _instantiateTaskFactory())
             {
@@ -61,7 +61,7 @@ namespace LifeTime
         /// <typeparam name="R">Type of result</typeparam>
         /// <param name="s">Delegate of story</param>
         /// <returns>result value</returns>
-        public async Task<R> Complete<R>(Story<R> s)
+        public async ValueTask<R> Complete<R>(Story<R> s)
         {
             using (T obj = await _instantiateTaskFactory())
             {
