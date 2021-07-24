@@ -15,5 +15,19 @@ namespace TestLifeTime
                 Assert.IsInstanceOf(typeof(MemoryStream), ms);
             });
         }
+
+        [Test]
+        public void TestWithR()
+        {
+            var lifeTime = 
+                new LifeTime<MemoryStream>(() => new MemoryStream());
+            var result = 
+                lifeTime.Complete<int>((ms) => {
+                    Assert.IsInstanceOf(typeof(MemoryStream), ms);
+                    return 0;
+                });
+
+            Assert.AreEqual(0,result);
+        }
     }
 }
