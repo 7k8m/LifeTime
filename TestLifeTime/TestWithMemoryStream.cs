@@ -55,13 +55,13 @@ namespace TestLifeTime
             var lifeTimeAsync =
                 new LifeTimeAsync<MemoryStream>(async () =>
                 {
-                    await Task.Delay(1);
+                    await Task.Delay(1);//dummy step for testing async code
                     return new MemoryStream();
                 });
             var result =
                 await lifeTimeAsync.Complete<int>(async (ms) =>
                 {
-                    await Task.Delay(1);
+                    await Task.Delay(1);//dummy step for testing async code
                     Assert.IsInstanceOf(typeof(MemoryStream), ms);
                     return 0;
                 });
