@@ -9,9 +9,10 @@ namespace TestLifeTime
         [Test]
         public void Test()
         {
-            var lifeTime = 
+            var lifeTime =
                 new LifeTime<MemoryStream>(() => new MemoryStream());
-            lifeTime.Complete((ms) => {
+            lifeTime.Complete((ms) =>
+            {
                 Assert.IsInstanceOf(typeof(MemoryStream), ms);
             });
         }
@@ -19,15 +20,16 @@ namespace TestLifeTime
         [Test]
         public void TestWithR()
         {
-            var lifeTime = 
+            var lifeTime =
                 new LifeTime<MemoryStream>(() => new MemoryStream());
-            var result = 
-                lifeTime.Complete<int>((ms) => {
+            var result =
+                lifeTime.Complete<int>((ms) =>
+                {
                     Assert.IsInstanceOf(typeof(MemoryStream), ms);
                     return 0;
                 });
 
-            Assert.AreEqual(0,result);
+            Assert.AreEqual(0, result);
         }
     }
 }
