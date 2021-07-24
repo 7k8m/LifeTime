@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace TestLifeTime
 {
-    public class Tests
+    ///Test using MemoryStream as stub object
+    public class TestWithMemoryStream
     {
         [Test]
         public void Test()
