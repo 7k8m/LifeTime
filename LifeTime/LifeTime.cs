@@ -23,7 +23,8 @@ namespace LifeTime
             }
         } 
 
-        public R Complete<R>(Story<R> s){
+        public R Complete<R>(Story<R> s)
+        {
             using(T obj = _createInstance())
             {
                 return s(obj);
