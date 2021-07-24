@@ -37,7 +37,7 @@ namespace TestLifeTime
         public async Task TestAsync()
         {
             var lifeTimeAsync =
-                new LifeTimeAsync<MemoryStream>(async () => 
+                new LifeTimeAsync<MemoryStream>(async () =>
                 {
                     await Task.Delay(1);
                     return new MemoryStream();
@@ -53,7 +53,7 @@ namespace TestLifeTime
         public async Task TestWithRAsync()
         {
             var lifeTimeAsync =
-                new LifeTimeAsync<MemoryStream>(async () => 
+                new LifeTimeAsync<MemoryStream>(async () =>
                 {
                     await Task.Delay(1);
                     return new MemoryStream();
