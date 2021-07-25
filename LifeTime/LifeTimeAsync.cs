@@ -7,7 +7,7 @@ namespace LifeTime
     /// Module to handle instantiating an object and story of code over it asynchronously
     /// </summary>
     /// <typeparam name="T">The type of object</typeparam>
-    public class LifeTimeAsync<T> where T : IDisposable
+    public class LifeTimeAsync<T> where T : IAsyncDisposable
     {
         /// <summary>
         /// Delegate of factory method for task to instantiate type T objecct
@@ -49,7 +49,7 @@ namespace LifeTime
         /// <param name="s">Delegate of story</param>
         public async ValueTask Complete(Story s)
         {
-            using (T obj = await _instantiateTaskFactory())
+            await using (T obj = await _instantiateTaskFactory())
             {
                 await s(obj);
             }
@@ -63,7 +63,7 @@ namespace LifeTime
         /// <returns>result value</returns>
         public async ValueTask<R> Complete<R>(Story<R> s)
         {
-            using (T obj = await _instantiateTaskFactory())
+            await using (T obj = await _instantiateTaskFactory())
             {
                 return await s(obj);
             }
