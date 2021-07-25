@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <RepositoryUrl>https://github.com/7k8m/lifetime</RepositoryUrl>
-    <Version>1.2.0</Version>    
+    <Version>1.3.0</Version>    
   </PropertyGroup>
 
 </Project>
