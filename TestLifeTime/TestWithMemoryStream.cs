@@ -20,7 +20,7 @@ namespace TestLifeTime
         }
 
         [Test]
-        public void TestWithR()
+        public void TestWithResult()
         {
             var lifeTime =
                 new LifeTime<MemoryStream>(() => new MemoryStream());
@@ -51,7 +51,7 @@ namespace TestLifeTime
         }
 
         [Test]
-        public async Task TestWithRAsync()
+        public async Task TestWithResultAsync()
         {
             var lifeTimeAsync =
                 new LifeTimeAsync<MemoryStream>(async () =>
