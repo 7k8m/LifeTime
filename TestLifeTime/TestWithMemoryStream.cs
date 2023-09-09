@@ -8,6 +8,9 @@ namespace TestLifeTime
     ///Test using MemoryStream as stub object
     public class TestWithMemoryStream
     {
+        /// <summary>
+        /// Test using MemoryStream as stub object
+        /// </summary>
         [Test]
         public void Test()
         {
@@ -19,6 +22,9 @@ namespace TestLifeTime
             });
         }
 
+        /// <summary>
+        /// Test using MemoryStream as stub object with result
+        /// </summary>
         [Test]
         public void TestWithResult()
         {
@@ -34,6 +40,10 @@ namespace TestLifeTime
             Assert.AreEqual(0, result);
         }
 
+        /// <summary>
+        /// Test using MemoryStream as stub object with async
+        /// </summary>
+        /// <returns></returns>
         [Test]
         public async Task TestAsync()
         {
@@ -50,6 +60,10 @@ namespace TestLifeTime
             });
         }
 
+        /// <summary>
+        /// Test using MemoryStream as stub object with async and result
+        /// </summary>
+        /// <returns></returns>
         [Test]
         public async Task TestWithResultAsync()
         {
